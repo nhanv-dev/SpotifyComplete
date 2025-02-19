@@ -1,0 +1,6 @@
+.Toastify__toast-body > div:last-child {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+}

@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  background-color: #181818;
+  max-height: 94px;
+  min-height: 94px;
+  z-index: 99;
+  border-top: solid 1px #3e3e3e;
+
+  &__media__control__btn {
+    color: #fff;
+  }
+}
