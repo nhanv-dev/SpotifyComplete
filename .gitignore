@@ -24,3 +24,8 @@ chrome-user-data
 *.swp
 *.swo
 
+**/vercel.json
+**/.firebase
+**/.firebaserc
+**/firebase.json
+**/.env
