@@ -9,6 +9,7 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 const { notFound, errorHandler } = require('./middlewares/errorHandler');
+const setupSwagger = require('./config/swaggerConfig');
 
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
@@ -17,7 +18,6 @@ const albumRoute = require('./routes/albumRoute');
 const playListRoute = require('./routes/playListRoute');
 const searchRoute = require('./routes/searchRoute');
 const artistRoute = require('./routes/artistRoute');
-
 // db connection
 const dbConnect = require('./config/dbConnect');
 dbConnect();
@@ -39,6 +39,7 @@ app.use('/api/playlists', playListRoute);
 app.use('/api/search', searchRoute);
 // routes
 
+setupSwagger(app);
 
 // Error handler
 app.use(notFound);
@@ -46,7 +47,7 @@ app.use(errorHandler);
 // Error handler
 
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
