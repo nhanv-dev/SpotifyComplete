@@ -1,15 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import {Box, Grid, IconButton, Slider} from '@mui/material'
 import {
-    PlayCircle, SkipNext, SkipPrevious,
-    Replay, Repeat, VolumeUp,
+    AirplaySharp, QueueMusicSharp,
     VolumeDown, VolumeMute, VolumeOff,
-    AirplaySharp, QueueMusicSharp
+    VolumeUp
 } from '@mui/icons-material/';
+import { Box, Grid, IconButton, Slider } from '@mui/material';
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { changeVolume } from "../../../redux/actions/audioActions";
 import PlayBack from "../Player";
-import {useDispatch, useSelector} from "react-redux";
-import {Link} from "react-router-dom";
-import {changeVolume} from "../../../redux/actions/audioActions";
 
 const Footer = () => {
     const {audio} = useSelector(state => state);

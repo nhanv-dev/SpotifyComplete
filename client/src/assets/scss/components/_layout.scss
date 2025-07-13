@@ -1,6 +1,6 @@
 .container__sidebar {
   position: fixed;
-  height: 87vh;
+  height: calc(100vh - 120px);
   top: 0;
   left: 0;
   bottom: 0;
@@ -12,13 +12,13 @@
   padding-left: 12px;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: 87vh;
+  height: calc(100vh - 120px);
   scroll-behavior: smooth;
 }
 
 .container__footer {
-  height: 13vh;
-  max-height: 13vh;
+  height: 120px;
+  max-height: 120px;
   overflow: hidden;
   position: fixed;
   bottom: 0;
